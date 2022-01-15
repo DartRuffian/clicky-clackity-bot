@@ -6,7 +6,7 @@ from discord.ext import commands
 from random import randint
 
 
-def roll_dice(num_dice: int, num_sides: int) -> tuple[int, list[int]]:
+def roll_dice(num_dice: int, num_sides: int) -> tuple:
     """Takes the number of dice to roll and the number of sides on those dice as arguments.
 Returns a tuple of the total and the list of all results rolled."""
     results = [randint(1, num_sides) for _ in range(num_dice)]
