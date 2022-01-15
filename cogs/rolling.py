@@ -46,7 +46,7 @@ The number of sides can be any number and doesn't match a standard die (4, 6, 8,
             extra_spaces = " " * (len(str(num_dice)) - len(str(i+1)))
             ordered_results.append(f"`{str(i+1)}{extra_spaces}.` {result}")
         message = [f"You rolled **{die}** and got: **{total}**!"] + ordered_results
-        await ctx.send("\n".join(message))
+        await ctx.reply("\n".join(message), mention_author=False)
 
 
 def setup(bot):
